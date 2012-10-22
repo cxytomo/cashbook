@@ -31,7 +31,8 @@ var show = function (e) {
 			if(window.getComputedStyle(prev_sibling,"").getPropertyValue('margin') === "0px") {
 				wrap.getElementsByClassName('day-total')[0].style.borderTop = "none";
 			}
-			if(next_sibling) {
+			if(next_sibling && window.getComputedStyle(next_sibling,"").getPropertyValue('margin') === "0px") {
+			console.log(next_sibling);
 			next_sibling.getElementsByClassName('day-total')[0].style.borderTop = "none";
 			}
 //			targ.style.backgroundPosition = "0 0";
