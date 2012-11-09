@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Clean Up Everyday!</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="index.css" media="all">
 </head>
 <body>
 	<div class="header">
 		<a href="#" title="Clean Up Everyday!">
-			<img src="images/cashbook-index.png" alt="cashbook">
+			<img src="images/cashbook_index.png" alt="cashbook">
 		</a>
 	</div>
 	<div class="wrapper">
@@ -25,123 +26,91 @@
 				<a href="#"> 
 				</a>
 			</li>
-			<li class="add-more" title="add more" >
+			<li class="add_more" title="add more" >
 				<a href="#">
 				</a>
 			</li>
 		</ul>
 		<p class="title">This Month’s Expenses
 		</p>
-<!--	
-		<div id="cash-in">
-			<div class="overview">
-				<span class="cash-in">
-					CASH-IN
-				</span>
-				<span class="total">
-					Total:
-				</span>
-				<span>
-					<a href="#" title="expand for details">
-						￥50
-					</a>
-				</span>
-			</div>
-		</div>
-		<div id="cash-out">
-			<div class="overview">
-				<span class="cash-out">
-					CASH-OUT
-				</span>
-				<span class="total">
-					Total:
-				</span>
-				<span>
-					<a href="#" title="expand for details">
-						￥50
-					</a>
-				</span>
-			</div>	
-		</div>	
--->
-		<div id="data-table">
-			<div class="table-header">
+		<div id="data_table">
+			<div class="table_header">
 				<span class="date">DATE</span>
 				<span class="category">CATEGORY</span>
 				<span class="detail">DETAIL</span>
 				<span class="expenses">EXPENSES</span>
-				<span class="edit-dropdown">EDIT</span>
+				<span class="edit_dropdown">EDIT</span>
 			</div>
-			<div class="table-main">
-				<div class="expense-1 single expenses clothes">
+			<div class="table_main">
+				<div class="expense_1 single expenses clothes">
 					<div class="tag">
-						<a class="category-clothes star" title="star" href="#">
-							<span class="col-1 ">star</span>
+						<a class="category_clothes star" title="star" href="#">
+							<span class="col_1 ">star</span>
 						</a>
 					</div>
 					<span class="date">12-01</span>
 					<span class="category">clothes</span>
 					<span class="detail">bag</span>
 					<span class="expenses">¥50</span>
-					<a class="edit-dropdown" title="edit" href="#">
-						<span class="col-7">edit</span>
+					<a class="edit_dropdown" title="edit" href="#">
+						<span class="col_7">edit</span>
 					</a>
 				</div>
 				<div class="expense-2 single expenses food">
 					<div class="tag">
-						<a class="category-food unstar" title="unstar" href="#">
-							<span class="col-1 ">star</span>
+						<a class="category_food unstar" title="unstar" href="#">
+							<span class="col_1 ">star</span>
 						</a>
 					</div>
 					<span class="date">12-11</span>
 					<span class="category">food</span>
 					<span class="detail">bag</span>
 					<span class="expenses">¥50</span>
-					<a class="edit-dropdown edit" title="edit" href="#">
-						<span class="col-7">							
+					<a class="edit_dropdown edit" title="edit" href="#">
+						<span class="col_7">							
 							edit
 						</span>
 					</a>
 				</div>
 				<div class="expense-3 non-single">
-					<div class="day-total expenses">
+					<div class="day_total expenses">
 						<span class="date">12-31</span>
 						<span class="category">...</span>
 						<span class="detail">...</span>
 						<span class="expenses">¥550</span>
-						<a class="edit-dropdown daytotal" title="dropdown" href="#">
-							<span class="col-7 ">dropdown</span>
+						<a class="edit_dropdown daytotal" title="dropdown" href="#">
+							<span class="col_7 ">dropdown</span>
 						</a>
 					</div>
-					<div class="day-detail">
-						<div class="day-detail-1 single expenses clothes">
+					<div class="day_detail">
+						<div class="day_detail_1 single expenses clothes">
 							<div class="tag">
 								<a class="category-clothes unstar" title="unstar" href="#">
-									<span class="col-1 ">unstar</span>
+									<span class="col_1 ">unstar</span>
 								</a>
 							</div>
 							<span class="date">12-31</span>
 							<span class="category">clothes</span>
 							<span class="detail">dress</span>
 							<span class="expenses">¥500</span>
-							<a class="edit-dropdown" title="edit" href="#">
-								<span class="col-7">
+							<a class="edit_dropdown" title="edit" href="#">
+								<span class="col_7">
 									edit
 								</span>
 							</a>
 						</div>
-						<div class="day-detail-2 single expenses clothes">
+						<div class="day_detail_2 single expenses clothes">
 							<div class="tag">
 								<a class="category-clothes star" title="star" href="#">
-									<span class="col-1">star</span>
+									<span class="col_1">star</span>
 								</a>
 							</div>
 							<span class="date">12-31</span>
 							<span class="category">clothes</span>
 							<span class="detail">dress</span>
 							<span class="expenses">¥500</span>
-							<a class="edit-dropdown" title="edit" href="#">
-								<span class="col-7">
+							<a class="edit_dropdown" title="edit" href="#">
+								<span class="col_7">
 									edit
 								</span>		
 							</a>
@@ -149,44 +118,44 @@
 					</div>
 				</div>
 				<div class="expense-3 non-single">
-					<div class="day-total expenses">
+					<div class="day_total expenses">
 						<span class="date">12-31</span>
 						<span class="category">...</span>
 						<span class="detail">...</span>
 						<span class="expenses">¥550</span>
-						<a class="edit-dropdown daytotal" title="dropdown" href="#">
-							<span class="col-7 ">dropdown</span>
+						<a class="edit_dropdown daytotal" title="dropdown" href="#">
+							<span class="col_7 ">dropdown</span>
 						</a>
 					</div>
-					<div class="day-detail">
-						<div class="day-detail-1 single expenses clothes">
+					<div class="day_detail">
+						<div class="day_detail_1 single expenses clothes">
 							<div class="tag">
 								<a class="category-clothes unstar" title="unstar" href="#">
-									<span class="col-1 ">unstar</span>
+									<span class="col_1 ">unstar</span>
 								</a>
 							</div>
 							<span class="date">12-31</span>
 							<span class="category">clothes</span>
 							<span class="detail">dress</span>
 							<span class="expenses">¥500</span>
-							<a class="edit-dropdown" title="edit" href="#">
-								<span class="col-7">
+							<a class="edit_dropdown" title="edit" href="#">
+								<span class="col_7">
 									edit
 								</span>
 							</a>
 						</div>
-						<div class="day-detail-2 single expenses clothes">
+						<div class="day_detail_2 single expenses clothes">
 							<div class="tag">
 								<a class="category-clothes star" title="star" href="#">
-									<span class="col-1">star</span>
+									<span class="col_1">star</span>
 								</a>
 							</div>
 							<span class="date">12-31</span>
 							<span class="category">clothes</span>
 							<span class="detail">dress</span>
 							<span class="expenses">¥500</span>
-							<a class="edit-dropdown" title="edit" href="#">
-								<span class="col-7">
+							<a class="edit_dropdown" title="edit" href="#">
+								<span class="col_7">
 									edit
 								</span>		
 							</a>
@@ -195,61 +164,59 @@
 				</div>
 			</div>	
 		</div>
-		<div class="create-more">
+		<div class="create_more">
 			<a href=""><span>Add More</span></a>
 		</div>
-		<form action="" method="post" class="form-add-more">
-			<fieldset>
-				<div class="conten">
-					<p class="cash_in_out">
-						<span>Cash in/out:</span>
-						<input type="radio" name="radio" id="cash_in" class="cash_in">
-						<label for="cash_in">In</label>
-						<input type="radio" name="radio" id="cash_out" class="cash_out"> 
-						<label for="cash_out">Out</label>
-					</p>
-					<p class="date">
-						<label for="date">Date:</label>
-						<select name="" id="date" class="sel-date">
-							<option value="today">Today</option>
-							<option value="yesterday">Yesterday</option>
-							<option value="calendar">Calendar</option>
-						</select>
-					</p>
-					<p class="category">
-						<label for="category_out">Category:</label>
-						<select name="category" id="category_out" class="cash_out" >
-							<option value="food">Food</option>
-							<option value="cloth">Cloth</option>
-							<option value="transport">Transport</option>
-						</select>
-					</p>
-<!--				<p class="cash_in">
-						<label for="category_in">Category</label>
-						<select name="category" id="category_in" class="category cash_in" >
-							<option value="wage">wage</option>
-							<option value="bonous">bonous</option>
-							<option value="lotter">lotter</option>
-						</select>
-					</p>
--->
-					<p class="expenses">
-						<label for="expenses">Expenses:</label>
-						<input name="expenses" id="expenses" type="text">
-						<span>￥</span>
-					</p>	
-					<p class="expense-details">
-						<label for="exp-detail">Details:</label>
-						<textarea name="details" id="exp-detail" cols="45" rows="10" placeholder="enter some details ...">
-						</textarea>
-					</p>	
-					<p class="submit">
-						<button type="submit" class="btn-submit">
-							Submit
-						</button>
-						<span><a href="#">or cancle</a></span>
-					</p>		
+		<form action="" method="post" class="form_add_more">
+			<fieldset class="conten">
+				<div class="cash_in_out form_el">
+					<span>Cash in/out:</span>
+					<input type="radio" name="radio" id="cash_in" class="cash_in">
+					<label for="cash_in">In</label>
+					<input type="radio" name="radio" id="cash_out" class="cash_out"> 
+					<label for="cash_out">Out</label>
 				</div>
+				<div class="date form_el">
+					<label for="datepicker">Date:</label>
+					<div class="op_pick_date">
+						<input type="text" id="datepicker" placeholder="mm/dd/yyyy">
+						<span class="calendar_icon">
+						</span>
+					</div>
+				</div>
+				<div class="category form_el">
+					<label for="category_out">Category:</label>
+					<select name="category" id="category_out" class="cash_out" >
+						<option value="food">Food</option>
+						<option value="cloth">Cloth</option>
+						<option value="transport">Transport</option>
+					</select>
+				</div>
+<!--			<div class="cash_in form_el">
+					<label for="category_in">Category</label>
+					<select name="category" id="category_in" class="category cash_in" >
+						<option value="wage">wage</option>
+						<option value="bonous">bonous</option>
+						<option value="lotter">lotter</option>
+					</select>
+				</div>
+-->
+				<div class="expenses form_el">
+					<label for="expenses">Expenses:</label>
+					<input name="expenses" id="expenses" type="text">
+					<span>￥</span>
+				</div>	
+				<div class="expense-details form_el">
+					<label for="exp-detail">Details:</label>
+					<textarea name="details" id="exp-detail" cols="45" rows="10">
+					</textarea>
+				</div>	
+				<div class="submit form_el">
+					<button type="submit" class="btn-submit">
+						Submit
+					</button>
+					<span><a href="#">or cancle</a></span>
+				</div>			
 			</fieldset>
 		</form>
 	</div>
@@ -258,6 +225,13 @@
 			©2012 Tomo  All right reserved
 		</p>
 	</div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	<script type="text/javascript" src="detail-dropdown.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+	<script>
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+    </script>
 </body>
 </html>
