@@ -176,8 +176,7 @@ select {
 	background: url('images/food.png') no-repeat;
 }
 
-#data_table .table_main .single .unstar,
-#data_table .table_main .single .star {
+#data_table .single .unstar, #data_table .single .star {
 	height:34px;
 	width:34px;
 	margin: 7px 70px 0 23px;
@@ -194,11 +193,11 @@ select {
 	background: url('images/dropdown.png') no-repeat;
 }
 
-#data_table .table_main .unstar {
+.table_main .unstar {
 	background: url('images/table_unstar.png') no-repeat;
 }
 
-#data_table .table_main .star {
+.table_main .star {
 	background: url('images/table_star.png') no-repeat;
 }
 
