@@ -65,3 +65,48 @@ $('#data_table .tag a').click(function (e) {
 	}
 	e.preventDefault();
 });
+
+$('.basicAppear').click(function (e) {
+	var cond_in,cond_out;
+	e = e || window.event;
+	cond_in = $('#cash_in').attr('checked');
+	cond_out = $('#cash_out').attr('checked');
+	if (typeof(cond_out) === 'undefined' && cond_in === 'checked') {
+		$('.transformSelectWrapper .cash_in')[0].style.display = 'block';
+	}
+	else if (typeof(cond_in) === 'undefined') {
+		$('.transformSelectWrapper .cash_out')[0].style.display = 'block';
+	}
+	e.preventDefault();
+});
+
+$('.cash_in_out input').change(function () {
+	$('.basicAppear span')[0].innerHTML = ' - Choose - ';
+});
+
+$('.transformSelectWrapper ul').click(function (e) {
+	var targ,content;
+	e = e || window.event;
+	targ = e.target || e.srcElement;
+	if (targ.nodeName === 'A') {
+		targ.parentNode.parentNode.getElementsByClassName('selected')[0].className = '';
+		content = targ.innerHTML;
+		$('.basicAppear span')[0].innerHTML = content;
+		targ.className = 'selected';
+	}
+	$('.transformSelectWrapper .cash_in')[0].style.display = 'none';
+	$('.transformSelectWrapper .cash_out')[0].style.display = 'none';
+	e.preventDefault();
+});
+/*
+$('body').click(function (e) {
+	var targ, cond_in, cond_out, cond;
+	e = e || window.event;
+	targ = e.target || e.srcElement;
+	cond_in = window.
+	if(targ.tagName !== 'UL') {
+		$('.transformSelectWrapper .cash_in')[0].style.display = 'none';
+		$('.transformSelectWrapper .cash_out')[0].style.display = 'none';
+	}
+});
+*/

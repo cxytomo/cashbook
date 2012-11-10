@@ -3,8 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Clean Up Everyday!</title>
-<!--	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
--->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
 	<link rel="stylesheet" type="text/css" href="index.css" media="all">
 </head>
 <body>
@@ -172,9 +171,9 @@
 			<fieldset class="conten">
 				<div class="cash_in_out form_el">
 					<span>Cash in/out:</span>
-					<input type="radio" name="radio" id="cash_in" class="cash_in">
+					<input type="radio" name="radio" id="cash_in" value="in" class="cash_in">
 					<label for="cash_in">In</label>
-					<input type="radio" name="radio" id="cash_out" class="cash_out"> 
+					<input type="radio" name="radio" id="cash_out" value="out" class="cash_out"> 
 					<label for="cash_out">Out</label>
 				</div>
 				<div class="date form_el">
@@ -185,23 +184,41 @@
 						</span>
 					</div>
 				</div>
-				<div class="category form_el">
-					<label for="category_out">Category:</label>
-					<select name="category" id="category_out" class="cash_out" >
-						<option value="food">Food</option>
-						<option value="cloth">Cloth</option>
-						<option value="transport">Transport</option>
-					</select>
+				<div class="transformSelectWrapper form_el">
+					<label>Category:</label>
+					<div class="basicAppear">
+						<span> - Choose - </span>
+						<a href="#" class="transformSelectOpen"></a>
+					</div>
+					<ul class="cash_out">
+						<li class="first">
+							<a href="#" index="0" class="selected"> - Choose - </a>
+						</li>
+						<li>
+							<a href="#" index="1">Food</a>
+						</li>
+						<li>
+							<a href="#" index="2">Cloth</a>
+						</li>
+						<li class="last">
+							<a href="#" index="3">Transport</a>
+						</li>
+					</ul>
+					<ul class="cash_in">
+						<li class="first">
+							<a href="#" index="0" class="selected"> - Choose - </a>
+						</li>
+						<li>
+							<a href="#" index="1">Wage</a>
+						</li>
+						<li>
+							<a href="#" index="2">Bonous</a>
+						</li>
+						<li class="last">
+							<a href="#" index="3">Lottery</a>
+						</li>
+					</ul>		
 				</div>
-<!--			<div class="cash_in form_el">
-					<label for="category_in">Category</label>
-					<select name="category" id="category_in" class="category cash_in" >
-						<option value="wage">wage</option>
-						<option value="bonous">bonous</option>
-						<option value="lotter">lotter</option>
-					</select>
-				</div>
--->
 				<div class="expenses form_el">
 					<label for="expenses">Expenses:</label>
 					<input name="expenses" id="expenses" type="text">
@@ -209,8 +226,7 @@
 				</div>	
 				<div class="expense-details form_el">
 					<label for="exp-detail">Details:</label>
-					<textarea name="details" id="exp-detail" cols="45" rows="10">
-					</textarea>
+					<textarea name="details" id="exp-detail" cols="45" rows="10" placeholder="enter some detail......"></textarea>
 				</div>	
 				<div class="submit form_el">
 					<button type="submit" class="btn-submit">
@@ -228,13 +244,11 @@
 	</div>
 	<script type="text/javascript" src="jquery-1.8.2.js"></script>
 	<script type="text/javascript" src="detail-dropdown.js"></script>
-<!--	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-
+	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
 	<script>
     $(function() {
         $( "#datepicker" ).datepicker();
     });
     </script>
--->
 </body>
 </html>

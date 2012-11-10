@@ -17,6 +17,7 @@ ul {
 }
 
 select {
+	-webkit-appearance: none;
 	font-size: 14px;
 	color: #333;
 	border: 1px solid #d8d8d8;
@@ -246,8 +247,8 @@ form {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	margin: 10px 0 20px 0;
-	font: normal 20px Arial, Helvetica, sans-serif;
-	color: #bbb;
+	font: normal 14px Arial, Helvetica, sans-serif;
+	color: #333;
 	position: relative;
 	display:none;
 }
@@ -280,30 +281,23 @@ fieldset {
 	border: none;
 }
 
-form .conten {
+.conten {
 	width: 690px;
 	height: 178px;
 	margin: 20px 60px;
 }
 
-form .conten .form_el {
+.form_el {
 	margin-bottom: 30px;
 }
 
-form .conten .cash_in_out label{
-	font-size: 14px;
-	color: #333;
-}
-
-form .conten .cash_in_out span {
-	float: left;
-	margin-right: 40px;
-}
-
-form .conten .date label,
-form .conten .category label,
-form .conten .expenses label,
-form .conten .expense-details label {
+.conten .date label,
+.conten .transformSelectWrapper label,
+.conten .expenses label,
+.conten .expense-details label,
+.conten .cash_in_out span {
+	color: #bbb;
+	font-size: 20px;
 	float: left;
 	text-align: right;
 	display: inline-block;
@@ -311,104 +305,163 @@ form .conten .expense-details label {
 	margin: 7px 40px 0 0;
 }
 
-form .conten .op_pick_date {
-	position: relative;
-	height: 36px;
-	width: 190px;
-	margin-left: 147px;
-	border: 1px solid #d8d8d8;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	font-size: 14px;
+.conten .cash_in_out span {
+	margin-top: 0;
 }
 
-form .conten .op_pick_date:after {
+.conten .op_pick_date {
+	position: relative;
+	margin-left: 147px;
+	width: 192px;
+	height: 38px;
+}
+
+.conten .op_pick_date:after {
 	content: "";
 	height: 0;
 	display: none;
 	clear: both;
 }
 
-form .conten .calendar_icon {
+.conten .calendar_icon {
+	position: absolute;
+	background: #eee url('images/calendar_icon.png') no-repeat 50% 50%;
+}
+
+.transformSelectWrapper {
+	position: relative;
+}
+
+.transformSelectWrapper ul {
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	left: 147px;
+	top: 39px;
+	border: 1px  solid #d8d8d8;
+	border-bottom: 0;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.transformSelectWrapper ul a {
+	color: #333;	
+	display: inline-block;
+	background-color: white;
+	width: 155px;
+	height: 36px;
+	text-indent: 6px;
+}
+
+.transformSelectWrapper ul .first a {
+	margin-top:5px;
+}
+
+.transformSelectWrapper ul .last a {
+	margin-bottom:5px;
+}
+
+.transformSelectWrapper ul a:hover {
+	background: #3582C4;
+	color: white;
+}
+
+.transformSelectWrapper ul li {
+	line-height: 36px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.transformSelectWrapper .selected {
+	background-color: #ededed;
+}
+.basicAppear {
+	position: relative;
+	width: 192px;
+	height: 38px;
+	margin-left: 147px;
+}
+
+.basicAppear span {
+	display: inline-block;
+	line-height: 36px;
+	text-indent: 6px;
+	cursor: pointer;
+}
+
+.basicAppear a {
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 36px;
-	padding-right: 34px;
-	background: #eee url('images/calendar_icon.png') no-repeat 50% 50%;
-	border-left: 1px solid #d8d8d8;
-	border-radius: 0 4px 4px 0;
-	-webkit-border-radius: 0 4px 4px 0;
-	-moz-border-radius:  0 4px 4px 0;
+	background: #EEE url('images/form_select.png') no-repeat 50% 50%;
 }
 
-form .conten .op_pick_date input {
-	float: left;
-	border: 0 none;
-	margin-top: 1px;
-	padding: 0 29px 0px 6px;
-	height: 34px;
-	width: 153px; 
-	font-size: 14px;
-}
-
-form .conten .expenses {
+.conten .expenses {
 	height: 36px;
 }
 
-form .conten .expenses input {
+.conten .expenses input {
+	text-indent: 6px;
+}
+
+.conten .expenses input, .conten .op_pick_date input, .basicAppear span {
 	height: 36px;
-	width: 156px;
+	width: 155px;
 	border: 1px solid #d8d8d8;
 	border-radius: 4px 0 0 4px;
 	-webkit-border-radius: 4px 0 0 4px;
 	-moz-border-radius: 4px 0 0 4px;
-	font-size: 14px;
 }
 
-form .conten .expenses span,form .conten .expenses input {
+.conten .op_pick_date input {
+	padding: 0 0 0 6px;
+	width: 149px; 
+}
+
+.conten .expenses span,form .conten .expenses input {
 	float: left;
 }
 
-form .conten .expenses span {
+.conten .expenses span, .conten .submit button {
+	font-size: 17px;
 	color: #333;
+}
+
+.conten .expenses span,.conten .calendar_icon, .basicAppear a {
 	text-align: center;
 	display: inline-block;
 	border-radius: 0 4px 4px 0;
 	border: 1px solid #d8d8d8;
+	border-left: 0;
 	height:36px;
 	width: 34px;
-	border-left: 0;
 	line-height: 40px;
 	background-color: #eee;
 }
 
-form .conten .expenses:after {
+.conten .expenses:after {
 	content: "";
 	height: 0;
 	display: none;
 	clear: both;
 }
 
-form .conten .expense-details textarea,form .conten .btn-submit {
+.conten .expense-details textarea, .form_el input {
 	font-size: 14px;
 }
-
-form .conten .expense-details textarea,form .conten .submit a {
-	font-size: 12px;
+.conten .submit a {
+	
 	color: #333;
 }
 
-form .conten .submit a:hover {
+.conten .submit a:hover {
 	text-decoration: underline;
 }
 
-form .conten .expense-details label {
+.conten .expense-details label {
 	float: left;
 }
 
-form .conten .btn-submit {
+.conten .btn-submit {
 	height: 36px;
 	width: 110px;
 	margin-left: 147px;
@@ -425,7 +478,7 @@ form .conten .btn-submit {
 	background-repeat: repeat-x;
 }
 
-form .conten .btn-submit:hover {
+.conten .btn-submit:hover {
 	color: #333;
 	text-decoration: none;
 	background-color: #E6E6E6;
