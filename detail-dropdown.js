@@ -98,15 +98,3 @@ $('.transformSelectWrapper ul').click(function (e) {
 	$('.transformSelectWrapper .cash_out')[0].style.display = 'none';
 	e.preventDefault();
 });
-/*
-$('body').click(function (e) {
-	var targ, cond_in, cond_out, cond;
-	e = e || window.event;
-	targ = e.target || e.srcElement;
-	cond_in = window.
-	if(targ.tagName !== 'UL') {
-		$('.transformSelectWrapper .cash_in')[0].style.display = 'none';
-		$('.transformSelectWrapper .cash_out')[0].style.display = 'none';
-	}
-});
-*/
