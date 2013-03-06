@@ -38,16 +38,12 @@ $('#data_table').click(function (e) {
 });
 
 $('.create_more').click(function (e) {
-	var add_form,status;
 	e = e || window.event;
-	add_form = document.getElementsByClassName('form_add_more')[0];
-	status = window.getComputedStyle(add_form,'').getPropertyValue('display');
-	if (status === 'none') {
-		add_form.style.display = 'block';
-	}
-	else if (status === 'block') {
-		add_form.style.display = 'none';
-	}
+	$('.form_add_more').css('display','block');
+	$('.overlay').css({
+		'display':'block',
+		'opacity':'0.7'
+	});
 	e.preventDefault();
 });
 
@@ -96,5 +92,28 @@ $('.transformSelectWrapper ul').click(function (e) {
 	}
 	$('.transformSelectWrapper .cash_in')[0].style.display = 'none';
 	$('.transformSelectWrapper .cash_out')[0].style.display = 'none';
+	e.preventDefault();
+});
+$('form .close').click(function (e){
+	e = e || window.event;
+	$('.form_add_more').css('display','none');
+	$('.overlay').css({
+		'display':'none',
+		'opacity':'0'
+	});
+	e.preventDefault();
+});
+$('form .submit a').click(function (e){
+	e = e || window.event;
+	$('.form_add_more').css('display','none');
+	$('.overlay').css({
+		'display':'none',
+		'opacity':'0'
+	});
+	e.preventDefault();
+});
+$('.nav .add_more').click(function (e){
+	e = e || window.event;
+	$('.form_add_more').style.display = 'block';
 	e.preventDefault();
 });
