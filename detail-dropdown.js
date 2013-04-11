@@ -131,11 +131,10 @@ $('form.form_add_more').submit(
 );
 
 function storeForm(f){
-	var date = $('#datepicker')[0].value;
-		
+	var date = $('#datepicker')[0].value
 		, form_el = $('form.form_add_more')[0];
 	if(window.localStorage) {
-		f.date = ;
+		f.date = xx;
 		localStorage.setItem('date',f.date);
 		var date = localStorage.getItem('date');
 		console.log(date);
