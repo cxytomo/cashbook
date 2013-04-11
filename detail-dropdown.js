@@ -94,6 +94,7 @@ $('.transformSelectWrapper ul').click(function (e) {
 	$('.transformSelectWrapper .cash_out')[0].style.display = 'none';
 	e.preventDefault();
 });
+
 $('form .close').click(function (e){
 	e = e || window.event;
 	$('.form_add_more').css('display','none');
@@ -103,6 +104,7 @@ $('form .close').click(function (e){
 	});
 	e.preventDefault();
 });
+
 $('form .submit a').click(function (e){
 	e = e || window.event;
 	$('.form_add_more').css('display','none');
@@ -112,8 +114,30 @@ $('form .submit a').click(function (e){
 	});
 	e.preventDefault();
 });
+
 $('.nav .add_more').click(function (e){
 	e = e || window.event;
-	$('.form_add_more').style.display = 'block';
+	$('.form_add_more')[0].style.display = 'block';
 	e.preventDefault();
 });
+
+//store form data while submit
+$('form.form_add_more').submit(
+	function(e){
+		e = e || window.event;
+		e.preventDefault();
+		storeForm($('form.form_add_more')[0]);
+	}
+);
+
+function storeForm(f){
+	var date = $('#datepicker')[0].value;
+		
+		, form_el = $('form.form_add_more')[0];
+	if(window.localStorage) {
+		f.date = ;
+		localStorage.setItem('date',f.date);
+		var date = localStorage.getItem('date');
+		console.log(date);
+	}
+}
