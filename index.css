@@ -26,6 +26,10 @@ select {
 	background-color: white;
 }
 
+button {
+	cursor: pointer;
+}
+
 .header,.header img {
 	height: 201px;
 	width: 810px;
@@ -64,7 +68,7 @@ select {
 	margin-right: 21px;
 }
 
-.nav .add_more {
+.nav .create_more {
 	margin-left: 463px;
 }
 
@@ -88,7 +92,7 @@ select {
 	background: url('images/category.png') no-repeat top;
 }
 
-.nav .add_more a:link {
+.nav .create_more a:link {
 	background: url('images/add_more.png') no-repeat top;
 }
 
@@ -96,7 +100,7 @@ select {
 	background-position: 100% 100%;
 }
 
-.nav .add_more a:hover,.nav .add_more a:focus,.nav .add_more a:active {
+.nav .create_more a:hover,.nav .create_more a:focus,.nav .create_more a:active {
 	background-position: 100% 100%;
 }
 
@@ -213,7 +217,7 @@ select {
 /*table ends here*/
 
 /*create more*/
-.create_more {
+.wrapper > .create_more {
 	width: 810px;
 	height: 62px;
 	border: 1px solid #d8d8d8; 
@@ -225,7 +229,7 @@ select {
 	position: relative;
 }
 
-.create_more a span {
+.wrapper > .create_more a span {
 	display: block;
 	height: 62px;
 	width: 798px;
@@ -235,7 +239,7 @@ select {
 	background: url('images/createmore.png') no-repeat 49% 86%;
 }
 
-.create_more a:hover span,.create_more a:focus span {
+.wrapper > .create_more a:hover span, .wrapper > .create_more a:focus span {
 	background-color: whitesmoke;
 }
 
@@ -258,8 +262,7 @@ select {
 	color: white;
 }
 
-form {
-	top:100px;
+.form_add_more {
 	position: absolute;
 	background-color: white;
 	width: 810px;

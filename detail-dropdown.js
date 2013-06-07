@@ -115,12 +115,6 @@ $('form .submit a').click(function (e){
 	e.preventDefault();
 });
 
-$('.nav .add_more').click(function (e){
-	e = e || window.event;
-	$('.form_add_more')[0].style.display = 'block';
-	e.preventDefault();
-});
-
 //store form data while submit
 $('form.form_add_more').submit(
 	function(e){
